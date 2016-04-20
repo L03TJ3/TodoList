@@ -1,4 +1,3 @@
-window.onload = function () {
   function updateCounters() {
     // Total number of todos
     var totalCount = document.getElementById('total-count');
@@ -18,8 +17,7 @@ window.onload = function () {
 
   updateCounters();
 
-
-  function toggleDone(){
+function toggleDone() {
     var checkbox = this;
 
     // check the checked status of the checkbox
@@ -33,4 +31,3 @@ window.onload = function () {
 
     updateCounters();
   }
-}
