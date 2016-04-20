@@ -16,3 +16,5 @@ function toggleDone() {
 
   updateCounters();
 }
+
+$("input[type=checkbox]").bind('change', toggleDone);
