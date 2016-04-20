@@ -56,5 +56,12 @@ function submitTodo(event) {
 
 }
 
+function cleanUpDoneTodos(event) {
+  event.preventDefault();
+  $.when($(".completed").remove())
+    .then(updateCounters);
+}
+
 $("input[type=checkbox]").bind('change', toggleDone);
 $("form").bind('submit', submitTodo);
+$("#clean-up").bind('click', cleanUpDoneTodos);
