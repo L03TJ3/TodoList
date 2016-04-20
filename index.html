@@ -3,6 +3,8 @@
   <meta charset="utf-8" />
   <title>TodoList</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
+  <script type="text/javascript" src="./js/index.js"  /></script>
+
 </head>
 <body>
   <div class="container">
@@ -14,11 +16,11 @@
 
     <ul id="todolist">
       <li class="todo">
-        <input id="todo-1" type="checkbox" value="1" />
+        <input id="todo-1" type="checkbox" value="1" onChange="toggleDone.bind(this)();" />
         <label for="todo-1">Sweep the floor</label>
       </li>
       <li class="todo completed">
-        <input id="todo-2" type="checkbox" value="1" checked="checked" />
+        <input id="todo-2" type="checkbox" value="1" checked="checked" onChange="toggleDone.bind(this)();" />
         <label for="todo-2">Dust the vases</label>
       </li>
     </ul>
@@ -28,6 +30,5 @@
       Total: <span id="total-count">1</span>
     </div>
   </div>
-<script type="text/javascript" src="./js/index.js"  /></script>
 </body>
 </html>
