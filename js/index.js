@@ -1,8 +1,17 @@
-// select the element containing the count
-var todoCounter = document.getElementById('todo-count');
+function updateCounters() {
+  // Total number of todos
+  var todoCounter = document.getElementById('todo-count');
+  var totalTodos = document.getElementByClassName("todo").length;
+  todoCounter.innerHTML = totalTodos;
 
-// count the number of todo's by their class name
-var totalTodos = document.getElementByClassName("todo").length;
+  // Total number of completed todos
+  var completedCount = document.getElementById('completed-count');
+  var completedTodos = document.getElementByClassName("completed").length;
+  completedCount.innerHTML = completedTodos;
 
-// update the HTML inside the counter element
-todoCounter.innerHTML = totalTodos;
+  // Total number of uncompleted todos
+  var todoCount = document.getElementById('todo-count');
+  var uncompletedTodos = totalTodos - completedTodos;
+}
+
+updateCounter();
